@@ -6,10 +6,10 @@ This code belongs to Cultured Team members as the group assignment in studies. A
 
 ## Cultured Team
 **Description**
-<br />Cultured Team is one of the students' groups from UOW Malaysia KDU Penang.
+<br />Cultured Team is one of the students' groups from [UOW Malaysia KDU Penang](https://www.uowmkdu.edu.my/).
 
 **Members**
-- Sakiasahi (Tan Wei Harng)
-- Viwyn (Ooi Wei Chuen)
-- WaiXian02 (Lim Wai Xian)
-- JhunKit (Kok Jhun Kit)
+- [@FujisakiSakiasahi](https://github.com/FujisakiSakiasahi) (Tan Wei Harng)
+- [@Viwyn](https://github.com/Viwyn) (Ooi Wei Chuen)
+- [@WaiXian02](https://github.com/WaiXian02) (Lim Wai Xian)
+- [@JhunKit](https://github.com/Jhunkit) (Kok Jhun Kit)
