@@ -5,8 +5,9 @@ This system is used to stores players' information of some minigames such as: Ti
 This code belongs to Cultured Team members as the group assignment in studies. Any uses of source code for are not allow in any mean. (jk u can use it we dont care :D)
 
 ## Cultured Team
-**Description**
-<br />Cultured Team is one of the students' groups from [UOW Malaysia KDU Penang](https://www.uowmkdu.edu.my/).
+**Description** 
+
+Cultured Team is one of the students' groups from [UOW Malaysia KDU Penang](https://www.uowmkdu.edu.my/).
 
 **Members**
 - [@FujisakiSakiasahi](https://github.com/FujisakiSakiasahi) (Tan Wei Harng)
