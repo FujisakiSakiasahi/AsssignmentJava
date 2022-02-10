@@ -1,18 +1,15 @@
-## Getting Started
+## Player Management System
+This system is used to stores players' information of some minigames such as: Tic Tac Toe, Snakes, Pong, etc.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Copyright
+This code belongs to Cultured Team members as the group assignment in studies. Any uses of source code for are not allow in any mean.
 
-## Folder Structure
+## Cultured Team
+# Description
+Cultured Team is one of the students' groups from UOW Malaysia KDU Penang.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# Members
+- Sakiasahi (Tan Wei Harng)
+- Viwyn (Ooi Wei Chuen)
+- Kobato (Lim Wai Xian)
+- JhunKit (Kok Jhun Kit)
