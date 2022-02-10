@@ -11,5 +11,5 @@ This code belongs to Cultured Team members as the group assignment in studies. A
 **Members**
 - Sakiasahi (Tan Wei Harng)
 - Viwyn (Ooi Wei Chuen)
-- Kobato (Lim Wai Xian)
+- WaiXian02 (Lim Wai Xian)
 - JhunKit (Kok Jhun Kit)
