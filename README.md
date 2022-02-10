@@ -5,10 +5,12 @@ This system is used to stores players' information of some minigames such as: Ti
 This code belongs to Cultured Team members as the group assignment in studies. Any uses of source code for are not allow in any mean.
 
 ## Cultured Team
-# Description
-Cultured Team is one of the students' groups from UOW Malaysia KDU Penang.
+**Description**
+<br />Cultured Team is one of the students' groups from UOW Malaysia KDU Penang.
 
-# Members
+test
+
+**Members**
 - Sakiasahi (Tan Wei Harng)
 - Viwyn (Ooi Wei Chuen)
 - Kobato (Lim Wai Xian)
