@@ -2,7 +2,7 @@ public class Player{
     private int id;
     private String name;
     private int points;
-    private int num = 0;
+    static int num = 0;
     
     //constructor
     public Player(String name, int points){
@@ -30,7 +30,7 @@ public class Player{
         return name;
     }
 
-    public int points(){
+    public int getPoints(){
         return points;
     }
 
