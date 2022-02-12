@@ -36,6 +36,6 @@ public class Player{
 
     //display
     public String toString(){
-        return ("\nPlayer ID: " + id + "\nPlayer Name: " + name + "\nPoints: " + points); 
+        return ("\nPlayer ID: " + id + "\nPlayer Name: " + name + "\nPoints: " + points + "\n"); 
     }
 }

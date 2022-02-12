@@ -4,3 +4,10 @@ Due 4/3/2021
 
 10/2/2021 - repo created
 11/2/2022 - jhunkit created Player.java class
+11/2/2022 - riaru fixed it :D
+
+12/2/2022
+- riaru made a temp ui to create a player (as a test)
+- added a function to print all player details
+
+- note: made a new discovery, if making a new function that can get input, pass in the scanner and not make a new one. This is because making a new scanner will buffer the original scanner. (took me like an hour)
