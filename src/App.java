@@ -31,10 +31,21 @@ public class App {
     }
 
     public static void printAllPlayers(ArrayList<Player> playerList){
+        System.out.print("\033[H\033[2J"); //cls
+        System.out.flush();
+
         for (Player x : playerList){
-            System.out.println(x.toString());
+            System.out.println(x.toString()); //printing
         }
+        
+        System.out.println("Press enter to continue..."); //system pause
+        new Scanner(System.in).nextLine();
+
+        System.out.print("\033[H\033[2J"); //cls
+        System.out.flush();
+        
     }
+
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
