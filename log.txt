@@ -12,3 +12,5 @@ Due 4/3/2021
 - jhunkit added clear screen and system pause for print all player details function
 
 - note: made a new discovery, if making a new function that can get input, pass in the scanner and not make a new one. This is because making a new scanner will buffer the original scanner. (took me like an hour)
+
+- jhunkit added clearscreen function and pause function.

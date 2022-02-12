@@ -7,6 +7,11 @@ public class App {
         System.out.print("1) Create new player \n2) Remove player \n3) Edit Player Information \n4) Show all players \n5) Exit \n\nChoose option (1-5): ");
     }
 
+    public static void clearScreen(){
+        System.out.print("\033[H\033[2J"); //cls
+        System.out.flush();
+    }
+
     public static Player createPlayer(Scanner sc){
         String name;
         int points;
@@ -26,28 +31,29 @@ public class App {
             }
         }
 
+        clearScreen();
         return new Player(name, points);
 
     }
 
-    public static void printAllPlayers(ArrayList<Player> playerList){
-        System.out.print("\033[H\033[2J"); //cls
-        System.out.flush();
-
+    public static void printAllPlayers(ArrayList<Player> playerList, Scanner sc){
+        clearScreen();
+        System.out.println("Players: ");
         for (Player x : playerList){
             System.out.println(x.toString()); //printing
         }
         
         System.out.println("Press enter to continue..."); //system pause
-        new Scanner(System.in).nextLine();
 
-        System.out.print("\033[H\033[2J"); //cls
-        System.out.flush();
-        
+        sc.nextLine();
+
+        clearScreen();
+
     }
 
 
     public static void main(String[] args) throws Exception {
+        clearScreen();
         Scanner sc = new Scanner(System.in);
         ArrayList<Player> playerList = new ArrayList<Player>();
         
@@ -70,7 +76,7 @@ public class App {
             }else if (choice == 3){
 
             }else if (choice == 4){
-                printAllPlayers(playerList);
+                printAllPlayers(playerList, sc);
             }else if (choice == 5){
                 break;
             }else{
@@ -78,8 +84,6 @@ public class App {
             }
 
         }
-
-
 
         sc.close();
     }
