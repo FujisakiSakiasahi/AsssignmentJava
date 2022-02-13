@@ -2,6 +2,7 @@ public class Player{
     private int id;
     private String name;
     private int points;
+    private int win, lose ;
     static int num = 0;
     
     //constructor

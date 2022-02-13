@@ -1,7 +1,20 @@
 Due 4/3/2021
+#To-do
+<1>
+You and your team should design the program with at least 2 classes (one class for the
+objects and another class as driver class which contain main method). Draw a class
+diagram for designing the program.
+Your system should be able to insert, delete, and update the records.
+
+<2>
+Build an interactive graphical user interface program by using Java that can perform the
+operations that you have in Assignment 1. You have to write the codes from scratch. No
+code generation by using drag and drop functions from any IDE.
+
+#In progress
+TWH - Read file, write file
+
 #ChangeLog
-
-
 10/2/2021 - repo created
 11/2/2022 - jhunkit created Player.java class
 11/2/2022 - riaru fixed it :D
@@ -14,3 +27,6 @@ Due 4/3/2021
 - note: made a new discovery, if making a new function that can get input, pass in the scanner and not make a new one. This is because making a new scanner will buffer the original scanner. (took me like an hour)
 
 - jhunkit added clearscreen function and pause function.
+
+13/2/2022
+- twh added 2 attributes (win and lose) in player class
