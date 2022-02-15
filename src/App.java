@@ -36,6 +36,25 @@ public class App {
 
     }
 
+    public static void removePlayer(ArrayList<Player> playerList,Scanner reader){
+        clearScreen();
+        String name;
+
+        System.out.println("Please enter the player name that you want to delete: ");
+        name = reader.nextLine();
+
+        System.out.println(name);
+
+        for(Player x : playerList){
+            System.out.println(x.getName());
+            if(name==x.getName()){
+                playerList.remove(x);
+                return;
+            }
+        }
+        System.out.println("Invalid Name");
+    }
+
     public static void printAllPlayers(ArrayList<Player> playerList, Scanner sc){
         clearScreen();
         System.out.println("Players: ");
@@ -72,7 +91,7 @@ public class App {
             if (choice == 1){
                 playerList.add(createPlayer(sc));
             }else if (choice == 2){
-                
+                removePlayer(playerList,sc);
             }else if (choice == 3){
 
             }else if (choice == 4){
