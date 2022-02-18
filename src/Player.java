@@ -2,7 +2,7 @@ public class Player{
     private int id;
     private String name;
     private int points;
-    private int win, lose ;
+    private int wins, loses ;
     static int num = 0;
     
     //constructor
@@ -33,6 +33,14 @@ public class Player{
 
     public int getPoints(){
         return points;
+    }
+
+    public void win(){
+        wins++;
+    }
+
+    public void lose(){
+        loses++;
     }
 
     //display
