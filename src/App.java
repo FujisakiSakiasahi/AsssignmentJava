@@ -39,8 +39,9 @@ public class App {
     public static void printAllPlayers(ArrayList<Player> playerList, Scanner sc){
         clearScreen();
         System.out.println("Players: ");
+        System.out.println("ID\tName\tPoints\tWLR");
         for (Player x : playerList){
-            System.out.println(x.toString()); //printing
+            System.out.println(x); //printing
         }
         
         System.out.println("Press enter to continue..."); //system pause

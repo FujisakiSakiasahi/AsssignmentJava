@@ -43,6 +43,14 @@ public class Player{
         loses++;
     }
 
+    public double calWLR(){
+        if (loses == 0){
+            return Double.valueOf(wins);
+        }else{
+            return wins / loses;
+        }
+    }
+
     //display
     public String toString(){
         return ("Player ID: " + id + "\nPlayer Name: " + name + "\nPoints: " + points + "\n"); 
