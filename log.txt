@@ -30,3 +30,8 @@ TWH - Read file, write file
 
 13/2/2022
 - twh added 2 attributes (win and lose) in player class
+
+18/02/2022
+- Riaru added a wlr calculator to the Player class
+- tried to make the printing of the players pretty but it didnt work
+- tried to fix wai xian's error for the remove player but failed.
