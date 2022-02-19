@@ -30,3 +30,8 @@ TWH - Read file, write file
 
 13/2/2022
 - twh added 2 attributes (win and lose) in player class
+
+19/2/2022
+- Riaru changed some things that wx added.
+- Riaru changed the scanner so now it is a static var that can be used in every function
+- still cant get the delete and edit to work.

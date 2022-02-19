@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Iterator;
 
 public class App {
+    static Scanner sc = new Scanner(System.in);
 
     public static void printMainMenu(){
         System.out.print("1) Create new player \n2) Remove player \n3) Edit Player Information \n4) Show all players \n5) Exit \n\nChoose option (1-5): ");
@@ -12,7 +14,7 @@ public class App {
         System.out.flush();
     }
 
-    public static Player createPlayer(Scanner sc){
+    public static Player createPlayer(){
         String name;
         int points;
 
@@ -36,32 +38,37 @@ public class App {
 
     }
 
-    public static void removePlayer(ArrayList<Player> playerList,Scanner reader){
+    public static void removePlayer(ArrayList<Player> playerList){
         clearScreen();
         String name;
 
         System.out.println("Please enter the player name that you want to delete: ");
-        name = reader.nextLine();
+        name = sc.nextLine();
 
-        for(Player x : playerList){
-            if(name==x.getName()){
-                playerList.remove(x);
+        Iterator<Player> itr = playerList.iterator();
+
+        while(itr.hasNext()){
+            String na = ((Player)itr.next()).getName();
+            if (na == name){
+                itr.remove();
                 return;
             }
         }
-        System.out.println("Invalid Name");
+
+        System.out.println("Player not found.");
+
     }
 
-    public static void EditPlayerInformation(ArrayList<Player> playerList,Scanner reader){
+    public static void EditPlayerInformation(ArrayList<Player> playerList){
         clearScreen();
         String name;
         String newName;
 
         System.out.println("Please enter the player name that you want to edit: ");
-        name = reader.nextLine();
+        name = sc.nextLine();
 
         System.out.println("Please enter a new name for the player: ");
-        newName = reader.nextLine();
+        newName = sc.nextLine();
 
         for(Player x : playerList){
             if(name==x.getName()){
@@ -73,7 +80,7 @@ public class App {
         System.out.println("Invalid Name");
     }
 
-    public static void printAllPlayers(ArrayList<Player> playerList, Scanner sc){
+    public static void printAllPlayers(ArrayList<Player> playerList){
         clearScreen();
         System.out.println("Players: ");
         for (Player x : playerList){
@@ -88,10 +95,8 @@ public class App {
 
     }
 
-
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         clearScreen();
-        Scanner sc = new Scanner(System.in);
         ArrayList<Player> playerList = new ArrayList<Player>();
         
         while(true){
@@ -107,13 +112,13 @@ public class App {
             }
 
             if (choice == 1){
-                playerList.add(createPlayer(sc));
+                playerList.add(createPlayer());
             }else if (choice == 2){
-                removePlayer(playerList,sc);
+                removePlayer(playerList);
             }else if (choice == 3){
-                EditPlayerInformation(playerList,sc);
+                EditPlayerInformation(playerList);
             }else if (choice == 4){
-                printAllPlayers(playerList, sc);
+                printAllPlayers(playerList);
             }else if (choice == 5){
                 break;
             }else{
