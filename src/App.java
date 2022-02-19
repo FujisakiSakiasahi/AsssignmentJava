@@ -55,14 +55,18 @@ public class App {
     public static void EditPlayerInformation(ArrayList<Player> playerList,Scanner reader){
         clearScreen();
         String name;
-        boolean TOF;
+        String newName;
 
         System.out.println("Please enter the player name that you want to edit: ");
         name = reader.nextLine();
 
+        System.out.println("Please enter a new name for the player: ");
+        newName = reader.nextLine();
+
         for(Player x : playerList){
             if(name==x.getName()){
-                TOF=true;
+                x.setName(newName);
+                System.out.println("The name has change to " + newName);
                 return;
             }
         }
