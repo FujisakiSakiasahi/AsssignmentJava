@@ -43,12 +43,26 @@ public class App {
         System.out.println("Please enter the player name that you want to delete: ");
         name = reader.nextLine();
 
-        System.out.println(name);
-
         for(Player x : playerList){
-            System.out.println(x.getName());
             if(name==x.getName()){
                 playerList.remove(x);
+                return;
+            }
+        }
+        System.out.println("Invalid Name");
+    }
+
+    public static void EditPlayerInformation(ArrayList<Player> playerList,Scanner reader){
+        clearScreen();
+        String name;
+        boolean TOF;
+
+        System.out.println("Please enter the player name that you want to edit: ");
+        name = reader.nextLine();
+
+        for(Player x : playerList){
+            if(name==x.getName()){
+                TOF=true;
                 return;
             }
         }
@@ -93,7 +107,7 @@ public class App {
             }else if (choice == 2){
                 removePlayer(playerList,sc);
             }else if (choice == 3){
-
+                EditPlayerInformation(playerList,sc);
             }else if (choice == 4){
                 printAllPlayers(playerList, sc);
             }else if (choice == 5){
