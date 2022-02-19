@@ -49,7 +49,7 @@ public class App {
 
         while(itr.hasNext()){
             String na = ((Player)itr.next()).getName();
-            if (na == name){
+            if (na.equals(name)){
                 itr.remove();
                 return;
             }
@@ -71,7 +71,7 @@ public class App {
         newName = sc.nextLine();
 
         for(Player x : playerList){
-            if(name==x.getName()){
+            if(name.equals(x.getName())){
                 x.setName(newName);
                 System.out.println("The name has change to " + newName);
                 return;
