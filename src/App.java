@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Iterator;
 
 public class App {
     static Scanner sc = new Scanner(System.in);
@@ -45,12 +44,15 @@ public class App {
         System.out.println("Please enter the player name that you want to delete: ");
         name = sc.nextLine();
 
-        Iterator<Player> itr = playerList.iterator();
-
-        while(itr.hasNext()){
-            String na = ((Player)itr.next()).getName();
-            if (na.equals(name)){
-                itr.remove();
+        for (Player x:playerList){
+            if (x.getName().equals(name)){
+                playerList.remove(x);
+                System.out.println("Deleted player " + name);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.out.println(e);
+                }
                 return;
             }
         }
