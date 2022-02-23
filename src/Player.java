@@ -1,4 +1,8 @@
-public class Player{
+import java.io.Serializable;
+
+
+public class Player implements Serializable{
+    private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private int points;
@@ -52,6 +56,7 @@ public class Player{
     }
 
     //display
+    @Override
     public String toString(){
         return ("Player ID: " + id + "\nPlayer Name: " + name + "\nPoints: " + points + "\n"); 
     }

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
 
 public class App {
     static Scanner sc = new Scanner(System.in);
@@ -98,9 +99,57 @@ public class App {
 
     }
 
+    public static void savePlayers(ArrayList<Player> playerList){
+        try{
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(new File("Players.txt")));
+
+            for (Player x : playerList){
+                output.writeObject(x);
+                System.out.println("Saved player " + x.getName());
+            }
+
+            output.close();
+
+        }catch (FileNotFoundException e) {
+			System.out.println("File not found");
+		}catch (IOException e) {
+			System.out.println("Error initializing stream");
+		}
+    }
+
+    public static void readPlayers(ArrayList<Player> playerList){
+        try{
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(new File("Players.txt")));
+
+            while(true){
+                try{
+                    Player p1;
+                    p1 = (Player) input.readObject();
+                    System.out.println("Loaded player " + p1.getName());
+                    Player.num++;
+                    playerList.add(p1);
+                }catch(EOFException e){
+                    break;
+                }
+            }
+                
+            input.close();
+
+        }catch(FileNotFoundException e) {
+            System.out.println("File Not Found.");
+        }catch(IOException e) {
+            System.out.println("Error initializing stream");
+        }catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static void main(String[] args){
         clearScreen();
         ArrayList<Player> playerList = new ArrayList<Player>();
+
+        readPlayers(playerList);
         
         while(true){
             int choice = 0;
@@ -123,6 +172,7 @@ public class App {
             }else if (choice == 4){
                 printAllPlayers(playerList);
             }else if (choice == 5){
+                savePlayers(playerList);
                 break;
             }else{
                 System.out.println("Error, input out of range.");
