@@ -86,7 +86,6 @@ public class App {
     public static void printAllPlayers(ArrayList<Player> playerList){
         clearScreen();
         System.out.println("Players: ");
-        System.out.println("ID\tName\tPoints\tWLR");
         for (Player x : playerList){
             System.out.println(x); //printing
         }

@@ -40,3 +40,6 @@ TWH - Read file, write file
 - Riaru changed some things that wx added.
 - Riaru changed the scanner so now it is a static var that can be used in every function
 - still cant get the delete and edit to work.
+
+23/2/2022
+- Riaru added a function to save players and read players
