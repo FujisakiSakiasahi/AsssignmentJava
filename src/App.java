@@ -70,17 +70,17 @@ public class App {
         System.out.println("Please enter the player name that you want to edit: ");
         name = sc.nextLine();
 
-        System.out.println("Please enter a new name for the player: ");
-        newName = sc.nextLine();
-
+        
         for(Player x : playerList){
             if(name.equals(x.getName())){
+                System.out.println("Please enter a new name for the player: ");
+                newName = sc.nextLine();
                 x.setName(newName);
                 System.out.println("The name has change to " + newName);
                 return;
             }
         }
-        System.out.println("Invalid Name");
+        System.out.println("Player Not Found.");
     }
 
     public static void printAllPlayers(ArrayList<Player> playerList){
@@ -171,7 +171,9 @@ public class App {
             }else if (choice == 4){
                 printAllPlayers(playerList);
             }else if (choice == 5){
-                savePlayers(playerList);
+                if (!playerList.isEmpty()){
+                    savePlayers(playerList);
+                }
                 break;
             }else{
                 System.out.println("Error, input out of range.");
