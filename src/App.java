@@ -17,6 +17,7 @@ public class App {
     public static Player createPlayer(){
         String name;
         int points;
+        clearScreen();
 
         System.out.print("Enter player name: ");
         name = sc.nextLine();
@@ -33,6 +34,12 @@ public class App {
             }
         }
 
+        System.out.println("Creating player " + name);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted");
+        }
         clearScreen();
         return new Player(name, points);
 
@@ -59,6 +66,12 @@ public class App {
         }
 
         System.out.println("Player not found.");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted");
+        }
+        clearScreen();
 
     }
 
@@ -81,6 +94,12 @@ public class App {
             }
         }
         System.out.println("Player Not Found.");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted");
+        }
+        clearScreen();
     }
 
     public static void printAllPlayers(ArrayList<Player> playerList){
@@ -124,7 +143,6 @@ public class App {
                 try{
                     Player p1;
                     p1 = (Player) input.readObject();
-                    System.out.println("Loaded player " + p1.getName());
                     Player.num++;
                     playerList.add(p1);
                 }catch(EOFException e){
@@ -135,7 +153,7 @@ public class App {
             input.close();
 
         }catch(FileNotFoundException e) {
-            System.out.println("File Not Found.");
+            return;
         }catch(IOException e) {
             System.out.println("Error initializing stream");
         }catch (ClassNotFoundException e) {
