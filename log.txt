@@ -43,3 +43,4 @@ TWH - Read file, write file
 
 23/2/2022
 - Riaru added a function to save players and read players
+- wrote the program description in the word file
