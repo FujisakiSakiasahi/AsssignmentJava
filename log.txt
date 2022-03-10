@@ -51,3 +51,7 @@ TWH - Read file, write file
 - edit player information no problem
 - show all player information no problem
 - exit function no problem
+
+------------------------------------<Assignment 2>------------------------------------
+10/3/2022 (twh)
+- add a Main.java, which will be used as the launcher
