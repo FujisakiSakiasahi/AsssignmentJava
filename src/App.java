@@ -3,47 +3,37 @@ import java.util.Scanner;
 import java.io.*;
 
 public class App {
-    static Scanner sc = new Scanner(System.in);
-
-    public static void printMainMenu(){
-        System.out.print("1) Create new player \n2) Remove player \n3) Edit Player Information \n4) Show all players \n5) Exit \n\nChoose option (1-5): ");
+    public static boolean checkPlayer(String name){
+        File file = new File("PlayerRecord\\"+name+".txt") ;
+        
+        if(file.exists()){
+            return true ;
+        }else{
+            return false ;
+        }
     }
+
+    public static void createPlayer(Player newPlayer){
+        try {
+            File newFile = new File(new File("").getAbsolutePath() + "\\PlayerRecord\\"+newPlayer.getName()+".txt") ;
+            if (newFile.createNewFile()) {
+                System.out.println("File created: " + newFile.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    static Scanner sc = new Scanner(System.in);
 
     public static void clearScreen(){
         System.out.print("\033[H\033[2J"); //cls
         System.out.flush();
     }
 
-    public static Player createPlayer(){
-        String name;
-        int points;
-        clearScreen();
-
-        System.out.print("Enter player name: ");
-        name = sc.nextLine();
-
-        while(true){
-            System.out.print("Enter " + name + "'s points: ");
-            if(sc.hasNextInt()){
-                points = sc.nextInt();
-                sc.nextLine();
-                break;
-            }else{
-                System.out.println("Error, invalid input.");
-                sc.next();
-            }
-        }
-
-        System.out.println("Creating player " + name);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            System.out.println("Interrupted");
-        }
-        clearScreen();
-        return new Player(name, points);
-
-    }
 
     public static void removePlayer(ArrayList<Player> playerList){
         clearScreen();
@@ -160,45 +150,5 @@ public class App {
             e.printStackTrace();
         }
 
-    }
-
-    public static void main(String[] args){
-        clearScreen();
-        ArrayList<Player> playerList = new ArrayList<Player>();
-
-        readPlayers(playerList);
-        
-        while(true){
-            int choice = 0;
-            printMainMenu();
-
-            if(sc.hasNextInt()){
-                choice = sc.nextInt();
-                sc.nextLine();
-            }else{
-                System.out.println("Error, invalid input.");
-                sc.next();
-            }
-
-            if (choice == 1){
-                playerList.add(createPlayer());
-            }else if (choice == 2){
-                removePlayer(playerList);
-            }else if (choice == 3){
-                EditPlayerInformation(playerList);
-            }else if (choice == 4){
-                printAllPlayers(playerList);
-            }else if (choice == 5){
-                if (!playerList.isEmpty()){
-                    savePlayers(playerList);
-                }
-                break;
-            }else{
-                System.out.println("Error, input out of range.");
-            }
-
-        }
-
-        sc.close();
     }
 }

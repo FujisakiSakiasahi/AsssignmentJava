@@ -55,3 +55,22 @@ TWH - Read file, write file
 ------------------------------------<Assignment 2>------------------------------------
 10/3/2022 (twh)
 - add a Main.java, which will be used as the launcher
+
+14/3/2022
+- Main.java renamed into GUI.java
+- 4 GUI pages/tabs are created
+- a stupid part of code is commented
+- finally settle the first tab ui arrangement
+
+15/3/2022
+- Tab<num>.java from 1 to 4 is created //to make the codes look tidier
+- All components in each tab/function is put under Tab<num>.java file
+- tab 1 & tab 2 complete
+- functions in App.java that is deleted
+    - main
+    - printMainMenu
+
+21/3/2022
+- tab 3 completed
+- check name function added in App.java
+- create player function in progress, fail to create file now
