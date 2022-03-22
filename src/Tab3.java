@@ -5,19 +5,19 @@ import javax.swing.*;
 public class Tab3 implements ActionListener{
     //card layout for tab 3
     private JPanel card = new JPanel() ;
+    
+    //components for the third tab
+    private JLabel heading = new JLabel("Editing player information: ") ;
+    private JLabel nameInputLabel = new JLabel("Name:") ;
+    private JTextField nameInput = new JTextField(10) ;
+    private JButton search = new JButton("Search") ;
+    private JTextField nameEditInput = new JTextField(10) ;
+    private JLabel pointInputLabel = new JLabel("Point:") ;
+    private JTextField pointEditInput = new JTextField(10) ;
+    private JButton clear = new JButton("Clear") ;
+    private JButton submit = new JButton("Save and change") ;
 
     public Tab3(){
-        //components for the third tab
-        JLabel heading = new JLabel("Editing player information: ") ;
-        JLabel nameInputLabel = new JLabel("Name:") ;
-        JTextField nameInput = new JTextField(10) ;
-        JButton search = new JButton("Search") ;
-        JTextField nameEditInput = new JTextField(10) ;
-        JLabel pointInputLabel = new JLabel("Point:") ;
-        JTextField pointEditInput = new JTextField(10) ;
-        JButton clear = new JButton("Clear") ;
-        JButton submit = new JButton("Save and change") ;
-
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
 
         //group line 1
@@ -52,6 +52,12 @@ public class Tab3 implements ActionListener{
         card.add(l3) ;
         card.add(l4) ;
         card.add(l5) ;
+
+        nameEditInput.setEditable(false);
+        pointEditInput.setEditable(false);
+        clear.setEnabled(false);
+        submit.setEnabled(false);
+
     }
 
     public JPanel getCard(){

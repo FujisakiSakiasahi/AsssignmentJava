@@ -1,6 +1,4 @@
 import java.awt.*;
-import java.util.ArrayList;
-
 //import java.awt.event.*;
 import javax.swing.*;
 
@@ -48,9 +46,6 @@ public class GUI extends JFrame{
     }
 
     public static void main(String[] args){
-        // ArrayList<Player> playerList = new ArrayList<Player>();
-        // App.readPlayers(playerList);
-        
         callWindow();
     }
 

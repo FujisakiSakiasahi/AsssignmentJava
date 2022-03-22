@@ -65,12 +65,16 @@ TWH - Read file, write file
 15/3/2022
 - Tab<num>.java from 1 to 4 is created //to make the codes look tidier
 - All components in each tab/function is put under Tab<num>.java file
-- tab 1 & tab 2 complete
+- tab 1 & tab 2 gui complete
 - functions in App.java that is deleted
     - main
     - printMainMenu
 
 21/3/2022
-- tab 3 completed
+- tab 3 gui completed
 - check name function added in App.java
 - create player function in progress, fail to create file now
+
+22/3/2022
+- tab 1 all complete including functions
+- tab 2 all complete including functions
