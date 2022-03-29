@@ -45,6 +45,34 @@ public class App {
         
         return data ;
     }
+
+    public static String[] getPlayer(String name){
+        File readFile = new File("lib\\"+name+".txt") ;
+        String[] data = new String[5] ;
+        int i = 0 ;
+
+        try{
+            Scanner sc = new Scanner(readFile) ;
+            
+            while(sc.hasNextLine()){
+                data[i] = sc.nextLine() ;
+                i++ ;
+            }
+            sc.close();
+
+        }catch(Exception e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+        String[] record = new String[i];
+        for(int j = 0 ; j < i ; j++){
+            String[] array = data[j].split(": ", 2) ;
+            record[j] = array[1] ;
+        }
+
+        return record ;
+    }
                 
     public static void removePlayer(String name){
         File toDelFile = new File("lib", name+".txt") ;

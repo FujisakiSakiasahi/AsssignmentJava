@@ -49,9 +49,7 @@ public class Tab1 implements ActionListener{
         card.add(l4) ;
         card.add(l5) ;
 
-        //need to try do this
-        //create rigid box 
-        //card1.add(BoxLayout.) ;
+        card.add(Box.createVerticalStrut(Short.MAX_VALUE)) ;
 
         clearField.addActionListener(this);
         submit.addActionListener(this);

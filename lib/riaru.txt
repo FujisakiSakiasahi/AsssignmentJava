@@ -1,0 +1,5 @@
+Player Name: riaru
+Points: 100
+Win: 0
+Lose: 0
+Winrate: 0.0

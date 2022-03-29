@@ -1,3 +1,0 @@
-Player ID: 100
-Player Name: john
-Points: 500

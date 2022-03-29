@@ -5,11 +5,11 @@ import javax.swing.*;
 public class Tab4 implements ActionListener{
     //card layout for tab 4
     private JPanel card = new JPanel() ;
-    private JLabel lblshowplayerinfo = new JLabel("Show Player Info");
+    private JLabel lblshowplayerinfo = new JLabel("Show Player Info:");
     private JLabel lblname = new JLabel("Name:");
     private JTextField txtplayername = new JTextField(10);
     private JTextArea result = new JTextArea(2,1) ;
-    private JButton btnsearch = new JButton("search");
+    private JButton btnsearch = new JButton("Search");
 
     public Tab4(){
         //components for the fouth tab
@@ -28,12 +28,14 @@ public class Tab4 implements ActionListener{
 
         JPanel l3 = new JPanel(new FlowLayout(FlowLayout.LEFT)) ;
         result.setEditable(false);
-        result.setText("Player ID: " + "\nPlayer Name: " + "\nPoints: " + "\n");
+        result.setText("Player Name: " + "\nPoints: " + "\nWin: " + "\nLose" + "\nWinrate: " );
         l3.add(result);
 
         card.add(l1);
         card.add(l2);
         card.add(l3);
+
+        card.add(Box.createVerticalStrut(Short.MAX_VALUE)) ;
     }
 
     public JPanel getCard(){

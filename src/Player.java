@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class Player implements Serializable{
     private static final long serialVersionUID = 1L;
-    private int id;
+    // private int id;
     private String name;
     private int points;
     private int wins, loses ;
@@ -10,13 +10,19 @@ public class Player implements Serializable{
     
     //constructor
     public Player(String name, int points){
-        this.id = 100 + num;
+        // this.id = 100 + num;
         this.name = name;
         this.points = points;
+        wins = 0 ;
+        loses = 0 ;
         num++;
     }
 
     //setters
+    // public void setID(int id){
+    //     this.id = id;
+    // }
+
     public void setName(String name){
         this.name = name;
     }
@@ -25,10 +31,15 @@ public class Player implements Serializable{
         this.points = points;
     }
 
-    //getters
-    public int getId(){
-        return id;
+    public void setWL(int wins, int loses){
+        this.wins = wins ;
+        this.loses = loses ;
     }
+
+    //getters
+    // public int getId(){
+    //     return id;
+    // }
 
     public String getName(){
         return name;
@@ -57,6 +68,6 @@ public class Player implements Serializable{
     //display
     @Override
     public String toString(){
-        return ("Player ID: " + id + "\nPlayer Name: " + name + "\nPoints: " + points + "\n"); 
+        return ("Player Name: " + name + "\nPoints: " + points + "\nWin: " + wins + "\nLose: " + loses + "\nWinrate: " + calWLR()); 
     }
 }

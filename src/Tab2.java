@@ -32,7 +32,7 @@ public class Tab2 implements ActionListener{
         JPanel l3 = new JPanel() ;
         l3.setLayout(new FlowLayout(FlowLayout.LEFT));
         result.setEditable(false);
-        result.setText("Player ID: " + "\nPlayer Name: " + "\nPoints: " + "\n");
+        result.setText("Player Name: " + "\nPoints: "  + "\nWin: "  + "\nLose: "  + "\nWinrate: " );
         l3.add(result) ;
 
         //group line 4
@@ -47,6 +47,8 @@ public class Tab2 implements ActionListener{
         card.add(l3) ;
         card.add(l4) ;
 
+        card.add(Box.createVerticalStrut(Short.MAX_VALUE)) ;
+
         search.addActionListener(this);
         remove.addActionListener(this);
     }
@@ -60,14 +62,18 @@ public class Tab2 implements ActionListener{
         if(e.getSource() == search){
             if(App.checkPlayer(nameInput.getText())){
                 remove.setEnabled(true);
+                result.setForeground(Color.BLACK);
                 result.setText(App.readPlayers(nameInput.getText()));
             }else{
                 remove.setEnabled(false);
                 result.setForeground(Color.RED);
-                result.setText("Player not existed!\n\n\n");
+                result.setText("Player not existed!\n\n\n\n");
             }
         }else if(e.getSource() == remove){
             App.removePlayer(nameInput.getText());
+            remove.setEnabled(false);
+            result.setForeground(Color.GREEN);
+            result.setText("Player record successfully deleted!\n\n\n\n");
         }
         
     }
