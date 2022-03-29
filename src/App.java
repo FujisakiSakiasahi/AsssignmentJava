@@ -3,6 +3,12 @@ import java.util.Scanner;
 import java.io.*;
 
 public class App {
+    
+    /**
+     * Use to check if player name is in used
+     * 
+     * @param name the name of the player that need to be checked
+     */
     public static boolean checkPlayer(String name){
         File file = new File("lib\\"+name+".txt") ;
         

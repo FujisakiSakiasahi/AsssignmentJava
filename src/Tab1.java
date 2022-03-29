@@ -64,14 +64,28 @@ public class Tab1 implements ActionListener{
         if(e.getSource() == clearField){
             nameInput.setText("");
             pointInput.setText("");
+            createStatus.setText("");
         }else if(e.getSource() == submit){
             if(App.checkPlayer(nameInput.getText())){
                 createStatus.setForeground(Color.RED);
                 createStatus.setText("Username already used!");
             }else{
-                App.createPlayer(new Player(nameInput.getText(), Integer.parseInt(pointInput.getText())));
-                createStatus.setForeground(Color.GREEN);
-                createStatus.setText("New player record created!");
+                if(nameInput.getText().equals("")){
+                    createStatus.setForeground(Color.RED);
+                    createStatus.setText("Name cannot be empty");
+                }else if(pointInput.getText().equals("")){
+                    createStatus.setForeground(Color.RED);
+                    createStatus.setText("Points cannot be empty");
+                }else{
+                    try{
+                        App.createPlayer(new Player(nameInput.getText(), Integer.parseInt(pointInput.getText())));
+                        createStatus.setForeground(Color.GREEN);
+                        createStatus.setText("New player record created!");
+                    }catch(NumberFormatException nfe){
+                        createStatus.setForeground(Color.RED);
+                        createStatus.setText("Wrong input at points input");
+                    }
+                }
             }
         }
         

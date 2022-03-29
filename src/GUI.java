@@ -6,7 +6,7 @@ public class GUI extends JFrame{
     final static String ADDNEW = "Create new player" ;
     final static String REMOVE = "Remove player" ;
     final static String EDITPLAYERINFO = "Edit player information" ;
-    final static String DISPLAY = "Show all player" ;
+    final static String DISPLAY = "Search player" ;
 
     final static int extraWindowWidth = 100;
 

@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Tab4 implements ActionListener{
     //card layout for tab 4
     private JPanel card = new JPanel() ;
-    private JLabel lblshowplayerinfo = new JLabel("Show Player Info:");
+    private JLabel lblshowplayerinfo = new JLabel("Search for a player:");
     private JLabel lblname = new JLabel("Name:");
     private JTextField txtplayername = new JTextField(10);
     private JTextArea result = new JTextArea(2,1) ;
@@ -46,6 +46,7 @@ public class Tab4 implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==btnsearch){
             if(App.checkPlayer(txtplayername.getText())){
+                result.setForeground(Color.BLACK);
                 result.setText(App.readPlayers(txtplayername.getText()));
             }else{
                 result.setForeground(Color.RED);

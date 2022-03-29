@@ -32,7 +32,7 @@ public class Tab2 implements ActionListener{
         JPanel l3 = new JPanel() ;
         l3.setLayout(new FlowLayout(FlowLayout.LEFT));
         result.setEditable(false);
-        result.setText("Player Name: " + "\nPoints: "  + "\nWin: "  + "\nLose: "  + "\nWinrate: " );
+        result.setText("Player Name: -" + "\nPoints: -"  + "\nWin: -"  + "\nLose: -"  + "\nWinrate: -" );
         l3.add(result) ;
 
         //group line 4

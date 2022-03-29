@@ -142,25 +142,35 @@ public class Tab3 implements ActionListener{
             String[] record = App.getPlayer(nameInput.getText()) ;
 
             if(record[0].equals(nameEditInput.getText()) || !App.checkPlayer(nameEditInput.getText())){
-                App.removePlayer(record[0]);
-                Player newPlayerInfo = new Player(nameEditInput.getText(), Integer.parseInt(pointEditInput.getText())) ;
-                newPlayerInfo.setWL(Integer.parseInt(winTF.getText()), Integer.parseInt(loseTF.getText())) ;
-                App.createPlayer(newPlayerInfo);
+                if(nameEditInput.getText().equals("")){
+                    JOptionPane.showMessageDialog(null, "Name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+                }else if(pointEditInput.getText().equals("")){
+                    JOptionPane.showMessageDialog(null, "Points cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    try{
+                        App.removePlayer(record[0]);
+                        Player newPlayerInfo = new Player(nameEditInput.getText(), Integer.parseInt(pointEditInput.getText())) ;
+                        newPlayerInfo.setWL(Integer.parseInt(winTF.getText()), Integer.parseInt(loseTF.getText())) ;
+                        App.createPlayer(newPlayerInfo);
 
-                nameInput.setText("");
-                
-                nameEditInput.setEditable(false);
-                pointEditInput.setEditable(false);
-                reset.setEnabled(false);
-                submit.setEnabled(false);
-                nameEditInput.setText("");
-                pointEditInput.setText("");
-                winTF.setText("");
-                loseTF.setText("");
-                WRTF.setText("");
-                
-                nameInput.setEditable(true);
-                search.setEnabled(true);
+                        nameInput.setText("");
+
+                        nameEditInput.setEditable(false);
+                        pointEditInput.setEditable(false);
+                        reset.setEnabled(false);
+                        submit.setEnabled(false);
+                        nameEditInput.setText("");
+                        pointEditInput.setText("");
+                        winTF.setText("");
+                        loseTF.setText("");
+                        WRTF.setText("");
+
+                        nameInput.setEditable(true);
+                        search.setEnabled(true);
+                    }catch(NumberFormatException nfe){
+                        JOptionPane.showMessageDialog(null, "Wrong input at points input", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
             }else{
                 JOptionPane.showMessageDialog(null, "This name is already existed", "Error", JOptionPane.ERROR_MESSAGE);
             }

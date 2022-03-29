@@ -1,4 +1,4 @@
-Player Name: riaru
+Player Name: riri
 Points: 100
 Win: 0
 Lose: 0
