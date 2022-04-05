@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
 
@@ -89,74 +88,6 @@ public class App {
             e.printStackTrace();
         }
         
-    }
-
-    static Scanner sc = new Scanner(System.in);
-
-    public static void clearScreen(){
-        System.out.print("\033[H\033[2J"); //cls
-        System.out.flush();
-    }
-
-    public static void EditPlayerInformation(ArrayList<Player> playerList){
-        clearScreen();
-        String name;
-        String newName;
-
-        System.out.println("Please enter the player name that you want to edit: ");
-        name = sc.nextLine();
-
-        
-        for(Player x : playerList){
-            if(name.equals(x.getName())){
-                System.out.println("Please enter a new name for the player: ");
-                
-                newName = sc.nextLine();
-                x.setName(newName);
-                System.out.println("The name has change to " + newName);
-                return;
-            }
-        }
-        System.out.println("Player Not Found.");
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            System.out.println("Interrupted");
-        }
-        clearScreen();
-    }
-
-    public static void printAllPlayers(ArrayList<Player> playerList){
-        clearScreen();
-        System.out.println("Players: ");
-        for (Player x : playerList){
-            System.out.println(x); //printing
-        }
-        
-        System.out.println("Press enter to continue..."); //system pause
-
-        sc.nextLine();
-
-        clearScreen();
-
-    }
-
-    public static void savePlayers(ArrayList<Player> playerList){
-        try{
-            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(new File("Players.txt")));
-
-            for (Player x : playerList){
-                output.writeObject(x);
-                System.out.println("Saved player " + x.getName());
-            }
-
-            output.close();
-
-        }catch (FileNotFoundException e) {
-			System.out.println("File not found");
-		}catch (IOException e) {
-			System.out.println("Error initializing stream");
-		}
     }
 
 }

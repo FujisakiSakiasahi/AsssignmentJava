@@ -32,8 +32,6 @@ public class GUI extends JFrame{
     public static void callWindow(){
         JFrame frame = new JFrame("Player Management System");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //dun know why cannot work
-        //frame.setLocationRelativeTo(null);
         
         GUI window = new GUI() ;
         window.addComponentToPane(frame.getContentPane()) ;

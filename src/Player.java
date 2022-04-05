@@ -2,7 +2,6 @@ import java.io.Serializable;
 
 public class Player implements Serializable{
     private static final long serialVersionUID = 1L;
-    // private int id;
     private String name;
     private int points;
     private int wins, loses ;
@@ -10,18 +9,12 @@ public class Player implements Serializable{
     
     //constructor
     public Player(String name, int points){
-        // this.id = 100 + num;
         this.name = name;
         this.points = points;
         wins = 0 ;
         loses = 0 ;
         num++;
     }
-
-    //setters
-    // public void setID(int id){
-    //     this.id = id;
-    // }
 
     public void setName(String name){
         this.name = name;
@@ -35,11 +28,6 @@ public class Player implements Serializable{
         this.wins = wins ;
         this.loses = loses ;
     }
-
-    //getters
-    // public int getId(){
-    //     return id;
-    // }
 
     public String getName(){
         return name;

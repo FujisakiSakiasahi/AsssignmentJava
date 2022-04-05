@@ -136,8 +136,6 @@ public class Tab3 implements ActionListener{
             loseTF.setText(record[3]);
             WRTF.setText(record[4]);
 
-            // nameInput.setEditable(true);
-            // search.setEnabled(true);
         }else if(e.getSource() == submit){
             String[] record = App.getPlayer(nameInput.getText()) ;
 
